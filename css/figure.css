@@ -1,0 +1,35 @@
+.arrowsingle-right {
+    height: 7px; 
+    width: 7px;
+	border: 1.3px solid ;
+	border-width: 1.3px 1.3px 0 0;
+    transform: rotate(45deg);
+}
+.arrowsingle-left {
+    height: 7px; 
+    width: 7px;
+	border: 1.3px solid ;
+	border-width: 0 0 1.3px 1.3px ;
+    transform: rotate(45deg);
+}
+.arrowdouble-right {
+    height: 7px; width: 7px;
+	border: 1.3px solid;
+	border-width: 1.3px 1.3px 0 0;
+    transform: rotate(45deg);
+    margin-right: 8.5px;
+}
+.arrowdouble-right:after {
+	content: '';
+	display: block;
+	height: 7px; width: 7px;
+	border: 1.3px solid;
+	border-width: 1.3px 1.3px 0 0;
+	
+	/* Parent's rotation also
+	   rotates transform axis */
+	/* Add width of border to Y */
+	transform: translate(5px, -6px);
+	
+	/* rotate handled by parent */
+}

@@ -1,0 +1,886 @@
+/***********************************************************************************************
+*************************************** Configuracion CSS **************************************
+************************************************************************************************/
+/* ------------------------------ Fonts ------------------------------*/
+@font-face {
+  font-family: "Klavika Light";
+  src: url("../fonts/Klavika/Klavika\ Light.otf");
+}
+
+@font-face {
+  font-family: "Nexa Light";
+  src: url("../fonts/Nexa/Nexa\ Light.otf");
+}
+
+@font-face {
+  font-family: "Klavika Bold";
+  src: url("../fonts/Klavika/Klavika\ Bold.otf");
+}
+
+/* --------------------------- Scroll Suave ---------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------ Preloader con Gifs ------------------------*/
+#preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #fefefe;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(../img/config/icons/preloader.gif);
+}
+
+/* -------------------------- Button toTop ---------------------------*/
+#toTop {
+  /*    toTop con Imagen    */
+  display: inline-block;
+  position: fixed;
+  padding: 0%;
+  /* Tamaño del Icono*/
+  width: 40px;
+  height: 40px;
+  /* Borde Circular
+    border-radius:34px;
+    border:2px solid rgb(255, 255, 255);*/
+  /* Ubicacion del Icono*/
+  bottom: 30px;
+  right: 25px;
+  /*30*/
+  background: url(../img/config/icons/down_arrow.png) no-repeat right top;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#toTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toTop:hover {
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  background: url(../img/config/icons/down_arrow_hover.png) no-repeat right top;
+}
+
+/* ----------------------  RedesSociales ------------------------*/
+/* CardsIcons: Estructure - Default Effect Transparent */
+.card-icons a {
+  display: inline-block;
+  text-decoration: none;
+  height: 28px;
+  width: 28px;
+  margin: 3px 2px;
+  border-radius: 100%;
+}
+
+.card-icons a i {
+  font-size: 17px;
+  background: transparent;
+  color: #6c757d;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+.card-icons a:hover > i {
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+
+.card-icons a:hover > .fa-facebook-f {
+  color: #3b5c9f;
+}
+
+.card-icons a:hover > .fa-globe {
+  color: black;
+}
+
+.card-icons a:hover > .fa-whatsapp {
+  color: #00e676;
+}
+
+.card-icons a:hover > .fa-youtube {
+  color: #ff0000;
+}
+
+.card-icons a:hover > .fa-twitter {
+  color: #1da1f2;
+}
+
+.card-icons a:hover > .fa-instagram {
+  color: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-icons a:hover > .fa-pinterest-p {
+  color: #bd0018;
+}
+
+/* CardsIcons: Design Square */
+.design-square a {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  border-radius: 0%;
+  margin: 0px;
+}
+
+.design-square a i {
+  width: 100%;
+  height: 100%;
+  color: white;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+.design-square a:hover > i {
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  -o-transition: all 0.9s ease 0s;
+}
+
+.design-square a:hover > .fa-facebook-f,
+.design-circle a:hover > .fa-facebook-f {
+  color: white;
+  background: #3b5c9f;
+}
+
+.design-square a:hover > .fa-globe,
+.design-circle a:hover > .fa-globe {
+  color: white;
+  background: rgb(8, 140, 173);
+}
+
+.design-square a:hover > .fa-whatsapp,
+.design-circle a:hover > .fa-whatsapp {
+  color: white;
+  background: #00e676;
+}
+
+.design-square a:hover > .fa-youtube,
+.design-circle a:hover > .fa-youtube {
+  color: white;
+  background: #ff0000;
+}
+
+.design-square a:hover > .fa-twitter,
+.design-circle a:hover > .fa-twitter {
+  color: white;
+  background: #1da1f2;
+}
+
+.design-square a:hover > .fa-instagram,
+.design-circle a:hover > .fa-instagram {
+  -webkit-text-fill-color: white;
+  color: white;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 33% 100%,
+    #fed373 4%,
+    #f15245 30%,
+    #d92e7f 62%,
+    #9b36b7 85%,
+    #515ecf
+  );
+  background: -moz-radial-gradient(
+    circle at 33% 100%,
+    #fed373 4%,
+    #f15245 30%,
+    #d92e7f 62%,
+    #9b36b7 85%,
+    #515ecf
+  );
+  background: -webkit-radial-gradient(
+    circle at 33% 100%,
+    #fed373 4%,
+    #f15245 30%,
+    #d92e7f 62%,
+    #9b36b7 85%,
+    #515ecf
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+  transition: width 0.2s, opacity 0.5s;
+  transition-delay: width 0.2s;
+
+  animation-name: gradient-fade-instagram;
+  animation-duration: 0.5s;
+  -webkit-animation-name: gradient-fade-instagram;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 0.5s;
+  /* Chrome, Safari, Opera */
+}
+
+.design-square a:hover > .fa-pinterest-p,
+.design-circle a:hover > .fa-pinterest-p {
+  color: white;
+  background: #bd0018;
+}
+
+/* CardsIcons: Design Circle */
+.design-circle a {
+  position: relative;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  margin: 0px 2px;
+  background: white;
+}
+
+.design-circle a i {
+  width: 100%;
+  height: 100%;
+  color: #6c757d;
+  transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+}
+
+.design-circle a:hover > i {
+  transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+}
+
+/* ----------------------- Button Hamburguesa ------------------------*/
+.bar_IconHamburguesa {
+  width: 25px;
+  height: 2px;
+  background-color: #1a1b1f;
+  margin: 6px 0;
+}
+
+.toggler_IconHamburguesa {
+  /*.header_menu .container .navbar .navbar-toggler*/
+  border: none;
+  opacity: 1;
+}
+
+.toggler_IconHamburguesa:hover > .bar_IconHamburguesa {
+  /*, .header_menu .container .navbar .navbar-toggler:focus > .bar_IconHamburguesa*/
+  transition: all 0.5s;
+  background-color: #ec3237;
+}
+
+/*quita el borde shadow de los botones hamburguesa y busqueda*/
+.toggler_IconHamburguesa.active.focus,
+.toggler_IconHamburguesa.active:focus,
+.toggler_IconHamburguesa.focus,
+.toggler_IconHamburguesa.focus:active,
+.toggler_IconHamburguesa:active:focus,
+.toggler_IconHamburguesa:focus {
+  /*.header_menu .container .navbar button*/
+  outline: 0;
+  outline-offset: 0;
+  background-image: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* --------------------------- Effect Zoom ---------------------------*/
+.effect_zoom {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.effect_zoom img {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.effect_zoom:hover img {
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari */
+  transform: scale(1.2);
+  /* Standard syntax */
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+/***********************************************************************************************
+****************************************** Header CSS ******************************************
+************************************************************************************************/
+/*--------------- #HEADER | ALL PAG: HeaderTop / HeaderMenu ------------------*/
+.header_top {
+  background: rgb(10, 10, 10) none repeat scroll 0 0;
+  /*HeaderTop - ColorLienzo */
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.header_top .contact-info ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  color: #fefefe;
+  /*HeaderTop - ColorFuente - Izquierda */
+}
+
+.header_top .contact-info ul li a:hover,
+.contact-info ul li a:focus {
+  background: transparent;
+  /*HeaderTop - ColorFuente - Izquierda - EventoSeleccion */
+  color: #fefefe;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: -1.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+/*
+.header-scrolled {
+
+    box-shadow: -1.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+    background-color: #000;
+    height: 50px;
+}*/
+.header_menu {
+  /*background-color | background-image | background-repeat | background-attachment | background-position */
+  background: #fefefe none repeat scroll 0 0;
+  /*HeaderTop - ColorLienzo */
+  font-family: "Klavika Light", sans-serif;
+}
+
+.header_menu .navbar {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.header_menu .navbar .collapse .navbar-nav .nav-item > a {
+  color: #1a1b1f;
+  /*border: 1px solid white;*/
+}
+
+.header_menu .navbar .collapse .navbar-nav .nav-item > a:hover,
+.header_menu .navbar .collapse .navbar-nav .nav-item > a:focus {
+  color: #ec3237;
+}
+
+/*    DROPDOWN FULL: Menu   */
+.dropdown-full {
+  position: static;
+}
+
+.dropdown-full-menu {
+  -webkit-box-shadow: 4px 9px 25px -6px rgba(77, 77, 77, 0.61);
+  -moz-box-shadow: 4px 9px 25px -6px rgba(77, 77, 77, 0.61);
+  /*box-shadow: 4px 9px 25px -6px rgba(77,77,77,0.61);*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0px 0px;
+  /*Default PaddinTop&Botton != 0 --> Se pone cero para respetar el Row*/
+  width: 100%;
+  margin-top: -0.5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: white;
+  /*El color debe estar en el DIV pricipal, los div no poseen color*/
+}
+
+.dropdown-full-menu .dropdown-full-container {
+  padding-top: 15px;
+  /*Padding Left & Rigth no se toca para que no haya desbordamiento*/
+  padding-bottom: 15px;
+}
+
+/*    DROPDOWN FULL: Title    */
+.dropdown-full-menu .dropdown-full-container .dropdown-full-title {
+  border-bottom: 1px solid rgb(192, 23, 23);
+}
+
+.dropdown-full-menu .dropdown-full-container .dropdown-full-title > ul > li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #b00017;
+  list-style: none;
+  background-color: transparent;
+}
+
+/*    DROPDOWN FULL: Item   */
+.dropdown-full-menu .dropdown-full-container .dropdown-full-item {
+  border: none;
+}
+
+.dropdown-full-menu .dropdown-full-container .dropdown-full-item a {
+  /*a directos de Div*/
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #323232;
+  background-color: transparent;
+}
+
+.dropdown-full-menu .dropdown-full-container .dropdown-full-item > a:hover,
+.dropdown-full-menu .dropdown-full-container .dropdown-full-item > a:focus {
+  text-decoration: none;
+  transition: all 0.2s;
+  color: #ff2437;
+}
+
+/*    DROPDOWN FULL: Imagen   */
+.dropdown-full-menu .dropdown-full-container .dropdown-full-imagen {
+  border: none;
+}
+
+.dropdown-full-menu .dropdown-full-container .dropdown-full-imagen > img {
+  background-color: transparent;
+}
+
+/*    DROPDOWN FULL: Panel   */
+.dropdown-full-menu .dropdown-full-container .dropdown-full-panel {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.dropdown-full-menu
+  .dropdown-full-container
+  .dropdown-full-panel
+  .title_categoria {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dropdown-full-menu .dropdown-full-container .dropdown-full-panel a:hover h5 {
+  text-decoration: none;
+  transition: all 0.2s;
+  color: #ff2437;
+}
+
+.full-novisible {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  display: none;
+}
+
+.full-visible {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  display: block;
+}
+
+/***********************************************************************************************
+****************************************** Section CSS *****************************************
+************************************************************************************************/
+/*----------------------------------- #SECTION | INDEX PAG ------------------------------------*/
+/*----------------------- Section Slider -----------------------*/
+.section_slider .carousel-item {
+  transition: transform 2s ease, opacity 0.5s ease-out;
+}
+
+/*
+.section_slider .carousel-indicators{
+    justify-content:flex-start;
+}
+*/
+.section_slider .carousel-indicators-z li {
+  color: #fff;
+  position: relative;
+  height: 4.5px;
+  width: 40px;
+  border-radius: 5px;
+  transition: all 0.25s ease;
+}
+
+.section_slider .carousel-indicators-z li.active,
+.section_slider .carousel-indicators-z li:hover {
+  background-color: #b00017;
+}
+
+/*-------------------------- Sections --------------------------*/
+.sections_tittle {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sections_tittle h2 {
+  font: 700 24px "Roboto", sans-serif;
+  color: #222222;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sections_tittle h2:after {
+  content: "";
+  position: absolute;
+  background: #ff2437;
+  height: 2px;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+}
+
+.sections_tittle h4 {
+  font: 400 14px "Ubuntu", sans-serif;
+  color: #555555;
+}
+
+.sections_content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+}
+
+.sections_content p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sections_content .img-flotante {
+  z-index: 3;
+  margin-top: -60%;
+}
+
+.sections_overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.sections_overlay .overlay_cap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /*Se configurara con el evento hover*/
+  /*
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(0, 0, 0, 0.7);
+    */
+}
+
+.efecct_zoom {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.efecct_zoom img {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.efecct_zoom:hover img {
+  /* IE 9 */
+  -webkit-transform: scale(1.2);
+  /* Safari */
+  transform: scale(1.2);
+  /* Standard syntax */
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+/*---------------------- Section Principal ----------------------*/
+.section_nosotros {
+  background: white;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.section_nosotros .sections_content .sections_overlay > img {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.effect-blackimg > img {
+  filter: brightness(25%);
+  -webkit-filter: brightness(25%);
+}
+
+.section_nosotros .sections_content .sections_overlay h3 {
+  /*font: 600 32px "Roboto", sans-serif;*/
+  font: 30px "Klavika Bold", sans-serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+}
+
+.section_nosotros .sections_content .sections_overlay h4 {
+  /*font: 600 32px "Roboto", sans-serif;*/
+  font: 600 22px "Klavika Light", sans-serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+}
+
+.section_nosotros .sections_content .sections_overlay p {
+  /*font: 600 32px "Roboto", sans-serif;*/
+  font: 500 15px "Klavika Light", sans-serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+}
+
+.section_nosotros .container-ripplesingle {
+  /*overflow:hidden;*/
+  height: 180px;
+  width: 180px;
+}
+
+.section_nosotros .container-ripplesingle a {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 15px "Roboto", sans-serif;
+  color: white;
+  height: 35%;
+  width: 35%;
+  border-radius: 100%;
+  transition: all 0.25s ease;
+}
+
+.section_nosotros .container-ripplesingle a:hover {
+  color: #f3f4f4;
+  background: #b00017;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.section_nosotros .container-ripplesingle a:hover ~ div {
+  border: 2px solid #ff2437;
+}
+
+.section_nosotros .sections_overlay .overlay_cap {
+  height: 100%;
+  z-index: initial;
+}
+
+.section_nosotros .sections_content .sections_base {
+  width: 100%;
+  height: 74px;
+  background: transparent;
+}
+
+/*---------------------- Section Footer ----------------------*/
+.section_footer {
+  background: black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-resumen .acceso-links {
+  font: 14px "Ubuntu", sans-serif;
+}
+
+.footer-resumen .acceso-links ul li {
+  list-style: none;
+}
+
+.footer-resumen .acceso-links ul li a {
+  position: relative;
+  color: white;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.footer-resumen .acceso-links ul li a i {
+  position: absolute;
+  color: white;
+  padding-right: 15px;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  /*transition: all 300ms linear 0s;*/
+}
+
+.footer-resumen .acceso-links ul li a:hover,
+.footer-resumen .acceso-links ul li a:focus {
+  color: #ec3237;
+}
+
+.footer-resumen .acceso-links ul li a:hover i,
+.footer-resumen .acceso-links ul li a:focus i {
+  left: 5px;
+  color: #ec3237;
+}
+
+.section_footer .footer-copyright {
+  font-size: 12px;
+  font-weight: 300;
+  color: #989899;
+}
+
+.section_footer .footer-copyright a {
+  text-decoration: none;
+  color: #989899;
+}
+
+.section_footer .footer-copyright a:hover {
+  color: #f3f4f4;
+}
+
+.section_footer .footer-copyright span a {
+  color: #f3f4f4;
+}
+
+.section_footer .footer-copyright span a:hover {
+  color: rgb(118, 130, 155);
+}
+
+.b8 .b8-slider.owl-carousel .owl-dots {
+  bottom: 12px;
+}
+
+.b8 .owl-dot {
+  background-color: #fff !important;
+  position: relative;
+  height: 4.5px !important;
+  width: 40px !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border: none !important;
+  transition: all 0.25s ease;
+  opacity: 0.5;
+  margin: 0 3px !important;
+}
+
+.b8 .owl-dot.active {
+  background-color: #b00017 !important;
+  opacity: 1;
+}
+
+#header .navbar > .container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  #header .navbar > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-relative {
+    top: 90px;
+  }
+}
+
+
+#p_promociones {
+  width: 970px;
+  background: #F5F7F8;
+}
+
+
+
+
+
+/*-------------------- Section Servicios ---------------------*/
+.section_somos {
+  background: #F5F5F5;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.section_somos .card-info-overlay{
+  font-family: "Ubuntu", sans-serif;
+}
+.section_somos .card-img-overlay .card-info-overlay{
+  bottom:0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  /*
+  background: rgb(176, 0, 23, 0.1);*/
+  position: absolute;
+}
+.section_somos .card-links-overlay{
+  font-family: "Ubuntu", sans-serif;
+}
+.section_somos .card-links-overlay H5 {
+  font: 500 19px "Ubuntu", sans-serif;
+  color: #6C757D;
+}
+.section_somos .card-links-overlay H5 i {
+  font-size: 1.2em;
+  vertical-align: bottom;
+}
+.section_somos .card-links-overlay a {
+  color: #6C757D;
+}
+.section_somos .card-links-overlay a :hover{
+  color: rgb(176, 0, 23);
+}
+.section_somos .card-links-overlay .link-principal {
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.viewmobile{
+  display: none;
+}

@@ -1,0 +1,293 @@
+/***********************************************************************************************
+****************************************** Section CSS *****************************************
+************************************************************************************************/
+.animationz {
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+/*----------------------- FloatingIlimit -----------------------*/
+.zfloating {
+    animation-name: zfloating;
+    -webkit-animation-name: zfloating;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes zfloating {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(1%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes zfloating {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(1%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+/*----------------------- SlideDownIn -----------------------*/
+.zslideDownIn {
+    -webkit-animation-name: zslideDownIn;
+    animation-name: zslideDownIn;
+}
+@-webkit-keyframes zslideDownIn {
+    0% {
+        -webkit-transform: translateY(-15px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    0% {
+        -webkit-transform: translateY(-15);
+    }
+}
+@keyframes zslideDownIn {
+    0% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    0% {
+        transform: translateY(-15px);
+    }
+}
+/*----------------------- SlideUpIn -----------------------*/
+.zslideUpIn {
+    -webkit-animation-name: zslideUpIn;
+    animation-name: zslideUpIn;
+}
+@-webkit-keyframes zslideUpIn {
+    0% {
+        -webkit-transform: translateY(20px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    0% {
+        -webkit-transform: translateY(20px);
+    }
+}
+@keyframes zslideUpIn {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    0% {
+        transform: translateY(20px);
+    }
+}
+/*---------------------------- Effect RipleSingle ------------------------------*/
+.effect-ripplesingle {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.effect-ripplesingle div {
+    position: absolute;
+    border: 2px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: effect-ripplesingle 2.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.effect-ripplesingle div:nth-child(2) {
+    animation-delay: 1.5s;
+}
+@keyframes effect-ripplesingle {
+    0% {
+        position: center;
+        width: 30%;
+        height: 30%;
+        opacity: 1;
+    }
+    50% {
+        position: center;
+        width: 80%;
+        height: 80%;
+        opacity: 0.5;
+    }
+    100% {
+        position: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+/*------------------------ Effect GradienteInstagram ---------------------------*/
+@keyframes gradient-fade-instagram {
+    0% {background:radial-gradient(circle at 33% 100%,  rgb(0, 0, 0) 4%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 62%, rgb(0, 0, 0) 85%, rgb(0, 0, 0));}
+    5% {background:radial-gradient(circle at 33% 100%,  rgb(12.7, 10.55, 5.75) 4%, rgb(12.05, 4.1, 3.45) 30%, rgb(10.85, 2.3, 6.35) 62%, rgb(7.75, 2.7, 9.15) 85%, rgb(4.05, 4.7, 10.35));}
+    10% {background:radial-gradient(circle at 33% 100%,  rgb(25.4, 21.1, 11.5) 4%, rgb(24.1, 8.2, 6.9) 30%, rgb(21.7, 4.6, 12.7) 62%, rgb(15.5, 5.4, 18.3) 85%, rgb(8.1, 9.4, 20.7));}
+    15% {background:radial-gradient(circle at 33% 100%,  rgb(38.1, 31.65, 17.25) 4%, rgb(36.15, 12.3, 10.35) 30%, rgb(32.55, 6.9, 19.05) 62%, rgb(23.25, 8.1, 27.45) 85%, rgb(12.15, 14.1, 31.05));}
+    20% {background:radial-gradient(circle at 33% 100%,  rgb(50.8, 42.2, 23) 4%, rgb(48.2, 16.4, 13.8) 30%, rgb(43.4, 9.2, 25.4) 62%, rgb(31, 10.8, 36.6) 85%, rgb(16.2, 18.8, 41.4));}
+    25% {background:radial-gradient(circle at 33% 100%,  rgb(63.5, 52.75, 28.75) 4%, rgb(60.25, 20.5, 17.25) 30%, rgb(54.25, 11.5, 31.75) 62%, rgb(38.75, 13.5, 45.75) 85%, rgb(20.25, 23.5, 51.75));}
+    30% {background:radial-gradient(circle at 33% 100%,  rgb(76.2, 63.3, 34.5) 4%, rgb(72.3, 24.6, 20.7) 30%, rgb(65.1, 13.8, 38.1) 62%, rgb(46.5, 16.2, 54.9) 85%, rgb(24.3, 28.2, 62.1));}
+    35% {background:radial-gradient(circle at 33% 100%,  rgb(88.9, 73.85, 40.25) 4%, rgb(84.35, 28.7, 24.15) 30%, rgb(75.95, 16.1, 44.45) 62%, rgb(54.25, 18.9, 64.05) 85%, rgb(28.35, 32.9, 72.45));}
+    40% {background:radial-gradient(circle at 33% 100%,  rgb(101.6, 84.4, 46) 4%, rgb(96.4, 32.8, 27.6) 30%, rgb(86.8, 18.4, 50.8) 62%, rgb(62, 21.6, 73.2) 85%, rgb(32.4, 37.6, 82.8));}
+    45% {background:radial-gradient(circle at 33% 100%,  rgb(114.3, 94.95, 51.75) 4%, rgb(108.45, 36.9, 31.05) 30%, rgb(97.65, 20.7, 57.15) 62%, rgb(69.75, 24.3, 82.35) 85%, rgb(36.45, 42.3, 93.15));}
+    50% {background:radial-gradient(circle at 33% 100%,  rgb(127, 105.5, 57.5) 4%, rgb(120.5, 41, 34.5) 30%, rgb(108.5, 23, 63.5) 62%, rgb(77.5, 27, 91.5) 85%, rgb(40.5, 47, 103.5));}
+    55% {background:radial-gradient(circle at 33% 100%,  rgb(139.7, 116.05, 63.25) 4%, rgb(132.55, 45.1, 37.95) 30%, rgb(119.35, 25.3, 69.85) 62%, rgb(85.25, 29.7, 100.65) 85%, rgb(44.55, 51.7, 113.85));}
+    60% {background:radial-gradient(circle at 33% 100%,  rgb(152.4, 126.6, 69) 4%, rgb(144.6, 49.2, 41.4) 30%, rgb(130.2, 27.6, 76.2) 62%, rgb(93, 32.4, 109.8) 85%, rgb(48.6, 56.4, 124.2));}
+    65% {background:radial-gradient(circle at 33% 100%,  rgb(165.1, 137.15, 74.75) 4%, rgb(156.65, 53.3, 44.85) 30%, rgb(141.05, 29.9, 82.55) 62%, rgb(100.75, 35.1, 118.95) 85%, rgb(52.65, 61.1, 134.55));}
+    70% {background:radial-gradient(circle at 33% 100%,  rgb(177.8, 147.7, 80.5) 4%, rgb(168.7, 57.4, 48.3) 30%, rgb(151.9, 32.2, 88.9) 62%, rgb(108.5, 37.8, 128.1) 85%, rgb(56.7, 65.8, 144.9));}
+    75% {background:radial-gradient(circle at 33% 100%,  rgb(190.5, 158.25, 86.25) 4%, rgb(180.75, 61.5, 51.75) 30%, rgb(162.75, 34.5, 95.25) 62%, rgb(116.25, 40.5, 137.25) 85%, rgb(60.75, 70.5, 155.25));}
+    80% {background:radial-gradient(circle at 33% 100%,  rgb(203.2, 168.8, 92) 4%, rgb(192.8, 65.6, 55.2) 30%, rgb(173.6, 36.8, 101.6) 62%, rgb(124, 43.2, 146.4) 85%, rgb(64.8, 75.2, 165.6));}
+    85% {background:radial-gradient(circle at 33% 100%,  rgb(215.9, 179.35, 97.75) 4%, rgb(204.85, 69.7, 58.65) 30%, rgb(184.45, 39.1, 107.95) 62%, rgb(131.75, 45.9, 155.55) 85%, rgb(68.85, 79.9, 175.95));}
+    90% {background:radial-gradient(circle at 33% 100%,  rgb(228.6, 189.9, 103.5) 4%, rgb(216.9, 73.8, 62.1) 30%, rgb(195.3, 41.4, 114.3) 62%, rgb(139.5, 48.6, 164.7) 85%, rgb(72.9, 84.6, 186.3));}
+    95% {background:radial-gradient(circle at 33% 100%,  rgb(241.3, 200.45, 109.25) 4%, rgb(228.95, 77.9, 65.55) 30%, rgb(206.15, 43.7, 120.65) 62%, rgb(147.25, 51.3, 173.85) 85%, rgb(76.95, 89.3, 196.65));}
+    100% {background:radial-gradient(circle at 33% 100%,  rgb(254, 211, 115) 4%, rgb(241, 82, 69) 30%, rgb(217, 46, 127) 62%, rgb(155, 54, 183) 85%, rgb(81, 94, 207));}
+}
+@-webkit-keyframes gradient-fade-instagram {
+    0% {background:radial-gradient(circle at 33% 100%,  rgb(0, 0, 0) 4%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 62%, rgb(0, 0, 0) 85%, rgb(0, 0, 0));}
+    5% {background:radial-gradient(circle at 33% 100%,  rgb(12.7, 10.55, 5.75) 4%, rgb(12.05, 4.1, 3.45) 30%, rgb(10.85, 2.3, 6.35) 62%, rgb(7.75, 2.7, 9.15) 85%, rgb(4.05, 4.7, 10.35));}
+    10% {background:radial-gradient(circle at 33% 100%,  rgb(25.4, 21.1, 11.5) 4%, rgb(24.1, 8.2, 6.9) 30%, rgb(21.7, 4.6, 12.7) 62%, rgb(15.5, 5.4, 18.3) 85%, rgb(8.1, 9.4, 20.7));}
+    15% {background:radial-gradient(circle at 33% 100%,  rgb(38.1, 31.65, 17.25) 4%, rgb(36.15, 12.3, 10.35) 30%, rgb(32.55, 6.9, 19.05) 62%, rgb(23.25, 8.1, 27.45) 85%, rgb(12.15, 14.1, 31.05));}
+    20% {background:radial-gradient(circle at 33% 100%,  rgb(50.8, 42.2, 23) 4%, rgb(48.2, 16.4, 13.8) 30%, rgb(43.4, 9.2, 25.4) 62%, rgb(31, 10.8, 36.6) 85%, rgb(16.2, 18.8, 41.4));}
+    25% {background:radial-gradient(circle at 33% 100%,  rgb(63.5, 52.75, 28.75) 4%, rgb(60.25, 20.5, 17.25) 30%, rgb(54.25, 11.5, 31.75) 62%, rgb(38.75, 13.5, 45.75) 85%, rgb(20.25, 23.5, 51.75));}
+    30% {background:radial-gradient(circle at 33% 100%,  rgb(76.2, 63.3, 34.5) 4%, rgb(72.3, 24.6, 20.7) 30%, rgb(65.1, 13.8, 38.1) 62%, rgb(46.5, 16.2, 54.9) 85%, rgb(24.3, 28.2, 62.1));}
+    35% {background:radial-gradient(circle at 33% 100%,  rgb(88.9, 73.85, 40.25) 4%, rgb(84.35, 28.7, 24.15) 30%, rgb(75.95, 16.1, 44.45) 62%, rgb(54.25, 18.9, 64.05) 85%, rgb(28.35, 32.9, 72.45));}
+    40% {background:radial-gradient(circle at 33% 100%,  rgb(101.6, 84.4, 46) 4%, rgb(96.4, 32.8, 27.6) 30%, rgb(86.8, 18.4, 50.8) 62%, rgb(62, 21.6, 73.2) 85%, rgb(32.4, 37.6, 82.8));}
+    45% {background:radial-gradient(circle at 33% 100%,  rgb(114.3, 94.95, 51.75) 4%, rgb(108.45, 36.9, 31.05) 30%, rgb(97.65, 20.7, 57.15) 62%, rgb(69.75, 24.3, 82.35) 85%, rgb(36.45, 42.3, 93.15));}
+    50% {background:radial-gradient(circle at 33% 100%,  rgb(127, 105.5, 57.5) 4%, rgb(120.5, 41, 34.5) 30%, rgb(108.5, 23, 63.5) 62%, rgb(77.5, 27, 91.5) 85%, rgb(40.5, 47, 103.5));}
+    55% {background:radial-gradient(circle at 33% 100%,  rgb(139.7, 116.05, 63.25) 4%, rgb(132.55, 45.1, 37.95) 30%, rgb(119.35, 25.3, 69.85) 62%, rgb(85.25, 29.7, 100.65) 85%, rgb(44.55, 51.7, 113.85));}
+    60% {background:radial-gradient(circle at 33% 100%,  rgb(152.4, 126.6, 69) 4%, rgb(144.6, 49.2, 41.4) 30%, rgb(130.2, 27.6, 76.2) 62%, rgb(93, 32.4, 109.8) 85%, rgb(48.6, 56.4, 124.2));}
+    65% {background:radial-gradient(circle at 33% 100%,  rgb(165.1, 137.15, 74.75) 4%, rgb(156.65, 53.3, 44.85) 30%, rgb(141.05, 29.9, 82.55) 62%, rgb(100.75, 35.1, 118.95) 85%, rgb(52.65, 61.1, 134.55));}
+    70% {background:radial-gradient(circle at 33% 100%,  rgb(177.8, 147.7, 80.5) 4%, rgb(168.7, 57.4, 48.3) 30%, rgb(151.9, 32.2, 88.9) 62%, rgb(108.5, 37.8, 128.1) 85%, rgb(56.7, 65.8, 144.9));}
+    75% {background:radial-gradient(circle at 33% 100%,  rgb(190.5, 158.25, 86.25) 4%, rgb(180.75, 61.5, 51.75) 30%, rgb(162.75, 34.5, 95.25) 62%, rgb(116.25, 40.5, 137.25) 85%, rgb(60.75, 70.5, 155.25));}
+    80% {background:radial-gradient(circle at 33% 100%,  rgb(203.2, 168.8, 92) 4%, rgb(192.8, 65.6, 55.2) 30%, rgb(173.6, 36.8, 101.6) 62%, rgb(124, 43.2, 146.4) 85%, rgb(64.8, 75.2, 165.6));}
+    85% {background:radial-gradient(circle at 33% 100%,  rgb(215.9, 179.35, 97.75) 4%, rgb(204.85, 69.7, 58.65) 30%, rgb(184.45, 39.1, 107.95) 62%, rgb(131.75, 45.9, 155.55) 85%, rgb(68.85, 79.9, 175.95));}
+    90% {background:radial-gradient(circle at 33% 100%,  rgb(228.6, 189.9, 103.5) 4%, rgb(216.9, 73.8, 62.1) 30%, rgb(195.3, 41.4, 114.3) 62%, rgb(139.5, 48.6, 164.7) 85%, rgb(72.9, 84.6, 186.3));}
+    95% {background:radial-gradient(circle at 33% 100%,  rgb(241.3, 200.45, 109.25) 4%, rgb(228.95, 77.9, 65.55) 30%, rgb(206.15, 43.7, 120.65) 62%, rgb(147.25, 51.3, 173.85) 85%, rgb(76.95, 89.3, 196.65));}
+    100% {background:radial-gradient(circle at 33% 100%,  rgb(254, 211, 115) 4%, rgb(241, 82, 69) 30%, rgb(217, 46, 127) 62%, rgb(155, 54, 183) 85%, rgb(81, 94, 207));}
+}
+/*--------------------------------- Effect arrow -------------------------------*/
+@keyframes effect-arrowmove {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-0.1rem);
+    }
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+@keyframes effect-arrowfixed {
+    5% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*------------------------------- Effect ArrowSlide ----------------------------*/
+@keyframes effect-sliderleft {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: -50%;
+    }
+    100% {
+        left: 0;
+    }
+  }
+@keyframes effect-slideright {
+    0% {
+        right: 0;
+    }
+    50% {
+        right: -50%;
+    }
+    100% {
+        right: 0;
+    }
+}
+/*------------------------------ Effect BorderLine -----------------------------*/
+.effect-borderline {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #E2E2E2;
+}
+.effect-borderline:before, .effect-borderline:after {
+    content: '';
+    border-style: solid;
+    position: absolute;
+    z-index: 5;
+    border-radius: 3px;
+    box-sizing: content-box;
+    transition: all 0.25s;
+}
+.effect-borderline:before {
+    width: 0;
+    height: 100%;
+    border-width: 1px 0 1px 0;
+    top: -1px;
+    left: 0;
+    transition-delay: 0.05s;
+}
+.effect-borderline:after {
+    width: 100%;
+    height: 0;
+    border-width: 0 1px 0 1px;
+    top: 0;
+    left: -1px;
+}
+.effect-borderline:hover:before {
+    width: 100%;
+    border-color: #054584;
+}
+.effect-borderline:hover:after {
+    height: 100%;
+    border-color: #054584;
+}
+/*------------------------------ Effect FillHeight -----------------------------*/
+.effect-fillheight {
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+.effect-fillheight:before, .effect-fillheight:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+.effect-fillheight:before {
+    top: 50%;
+}
+.effect-fillheight:after {
+    bottom: 50%;
+}
+.effect-fillheight:hover .effect-fillheight:before,
+.effect-fillheight:hover .effect-fillheight:after {
+  height: 50%;
+  opacity: 1;
+  background: rgb(5, 69, 132, .95);
+}
+/*------------------------------------------------------------------------------*/

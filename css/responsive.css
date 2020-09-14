@@ -1,0 +1,248 @@
+/* 
+XS = retrato móvil
+SM = paisaje móvil
+MD = Tableta
+LG = Escritorio
+ */ 
+
+/* [xl]     Extra large devices (large desktops, 1200px and up) */
+@media  (min-width: 1200px){ 
+    /*--------------- #PAGE | HOME PAG: Portada Slider ------------------*/
+    
+
+} 
+
+
+
+
+/* [lg]     Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /*--------------- #PAGE | HOME PAG: Portada Slider ------------------*/
+
+    
+}
+
+
+    
+/* [md]     Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*--------------- #HEADER | ALL PAG: HeaderMenu ------------------*/
+    .header_menu .navbar .navbar-logo {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* [sm]     Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /***********************************************************************************************
+  *************************************** Configuracion CSS **************************************
+  ************************************************************************************************/
+
+
+  /***********************************************************************************************
+  ****************************************** Header CSS ******************************************
+  ************************************************************************************************/
+  /*--------------- #HEADER | ALL PAG: HeaderTop / HeaderMenu ------------------*/
+  .header_top .contact-info .li-email{
+    display: none;
+  }
+  .dropdown-full {
+    position: static;
+  }
+  .dropdown-full-menu {
+    box-shadow: none;
+    border: 0px;
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .slideDownIn {
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .header_menu .navbar .navbar-brand .navbar-logo{
+    content:url(../img/config/logos/Honda-Phone.png);
+    width: 45px; /* La anchura de la nueva imagen */
+    height: 36px; /* La altura de la nueva imagen */
+  }
+/***********************************************************************************************
+***************************************** Sections CSS *****************************************
+************************************************************************************************/
+/*--------------------- #HEADER | HOME PAG: Sections -------------------------*/
+/*-------------------- Section Promociones ---------------------*/
+    .section_promociones .carousel-inner .carousel-item-right.active,
+    .section_promociones .carousel-inner .carousel-item-next {
+        transform: translateX(100%);
+    }
+    .section_promociones .carousel-inner .carousel-item-left.active, 
+    .section_promociones .carousel-inner .carousel-item-prev {
+        transform: translateX(-100%);
+    }
+    .section_promociones .carousel-inner .carousel-item-right,
+    .section_promociones .carousel-inner .carousel-item-left{ 
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [xs]     Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+/***********************************************************************************************
+  *************************************** Configuracion CSS **************************************
+  ************************************************************************************************/
+  /* ----------------------  RedesSociales ------------------------*/
+  /* CardsIcons: Estructure - Default Effect Transparent */
+  .card-icons a{
+    height: 20px;
+    width: 20px;
+  }
+  .card-icons a i{
+    font-size: 14px;
+  }
+  /* CardsIcons: Design Square */
+  .design-square a{
+    height: 25px;
+    width: 25px;
+  }
+  .design-square a i{
+    font-size: 16px;
+  }
+  /***********************************************************************************************
+  ****************************************** Header CSS ******************************************
+  ************************************************************************************************/
+  /*--------------- #HEADER | ALL PAG: HeaderTop / HeaderMenu ------------------*/
+  .header_top .contact-info .li-email{
+    display: none;
+  }
+  .dropdown-full {
+    position: static;
+  }
+  .dropdown-full-menu {
+    box-shadow: none;
+    border: 0px;
+    padding: 10px 0px;
+    width: 100%;
+  }
+  .slideDownIn {
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .header_menu .navbar .navbar-brand .navbar-logo{
+    content:url(../img/config/logos/Honda-Phone.png);
+    width: 45px; /* La anchura de la nueva imagen */
+    height: 36px; /* La altura de la nueva imagen */
+  }
+
+
+
+
+
+
+    /*--------------- #FOOTER | ALL PAG: Container ------------------*/
+    
+    .dropdown-full {
+        position: static;
+      }
+      .dropdown-full-menu {
+        box-shadow: none;
+        border: 0px;
+        padding: 10px 0px;
+        width: 100%;
+      }
+      .slideDownIn {
+        -webkit-animation-name: none;
+        animation-name: none;
+      }
+    .section_footer .acceso-links ul li {
+        margin-right: auto;
+    }
+
+/***********************************************************************************************
+***************************************** Sections CSS *****************************************
+************************************************************************************************/
+/*----------------------------------- #SECTION | INDEX PAG ------------------------------------*/
+/*----------------------- Section Slider -----------------------*/
+  .section_slider .carousel-item {
+    height: 40vh;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+/*----------------------- Section Static -----------------------*/
+  .section_static {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .section_static h4 {
+    font: 200 16px "Roboto", sans-serif;
+  }
+  .section_static p {
+    font: 400 13px/26px "Roboto", sans-serif;
+    margin-bottom: 10px;
+  }
+  .section_static img {
+    height: 120px;
+    width: 120px;
+  }
+/*-------------------------- Sections --------------------------*/
+  .sections_tittle h2 {
+    font: 400 22px "Roboto", sans-serif;
+    margin-bottom: 20px;
+  }
+  .sections_tittle h4 {
+    font: 400 13px "Ubuntu", sans-serif;
+  }
+  .sections_subtittle h2 {
+    font: 400 20px "Roboto", sans-serif;
+    margin-bottom: 15px;
+  }
+  .sections_subtittle h2:after {
+    width: 35px;
+  }
+  .sections_content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .sections_content p{
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+
+
+  .viewmobile{
+    display: inline-block;
+  }
+
+  .viewweb{
+    display: none;
+  }
+
+
+
+
+
+}
